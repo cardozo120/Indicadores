@@ -63,9 +63,8 @@ strong, b {
   min-height: 100vh;
   padding: 30px;
   padding-bottom: 40px;
-  padding-top: 90px;
+  padding-top: 140px;
   position: relative;
-  margin-left: 240px;
   -moz-transition: margin-left 0.3s;
   -o-transition: margin-left 0.3s;
   -webkit-transition: margin-left 0.3s;
@@ -1063,7 +1062,8 @@ body.nav-collapsed .metisMenu .sub-menu .sub-menu.in {
 
 ul.dropdown-menu.top-dropdown {
   right: 0;
-  left: auto; }
+  left: auto;
+  z-index: 9;}
 
 .dropdown-menu.lg-dropdown {
   min-width: 280px; }
@@ -3030,7 +3030,7 @@ ul.tabs-nav > li > a {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 999; }
+  z-index: 9; }
 
   .top-bar2 {
     height: 60px;
@@ -3041,7 +3041,7 @@ ul.tabs-nav > li > a {
     z-index: 999; }
 
     .top-bar2.primary-top-bar {
-      background: #5867cc; }
+      background: #f3f5f7; }
       .top-bar2.primary-top-bar .top-right-nav > li > a {
         color: #fff; }
         .top-bar2.primary-top-bar .top-right-nav > li > a:hover {
@@ -3155,15 +3155,16 @@ ul.tabs-nav > li > a {
         width: 35px; }
 
         .top-right-nav2 {
+width: 100%;
           margin: 0;
           padding: 0;
-          float: left;
-          padding-right: 0px; }
+          padding-left: 230px;
+          padding-right: 150px;}
           .top-right-nav2 > li {
             display: block;
             float: left;
             position: relative;
-            padding-left: 100px; }
+            padding-left: 60px; }
             .top-right-nav2 > li i {
               vertical-align: middle;
               display: inline-block;
@@ -3174,7 +3175,7 @@ ul.tabs-nav > li > a {
               display: block;
               line-height: 60px;
               padding: 0px 15px;
-              color: #fff; }
+              color: #5867dd; }
               .top-right-nav2 > li > a img {
                 border: 2px solid rgba(255, 255, 255, 0.5);
                 margin-right: 0px;
@@ -3200,7 +3201,7 @@ ul.tabs-nav > li > a {
                       display: block;
                       line-height: 60px;
                       padding: 0px 15px;
-                      color: #fff; }
+                      color: #5867dd; }
                       .top-right-nav3 > li > a img {
                         border: 2px solid rgba(255, 255, 255, 0.5);
                         margin-right: 0px;
@@ -4201,7 +4202,7 @@ figure {
     margin-left: 0; }
 
   .top-bar {
-    z-index: 4; }
+    z-index: 9; }
     .top-bar.primary-top-bar {
       background: #fff; }
 
