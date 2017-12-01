@@ -1,28 +1,5 @@
-
-@media (max-width: 800px) {
-  .top-right-nav2 {
-    margin: 0;
-    padding: 0;
-    float: left;
-    padding-right: 0px; }
-    .top-right-nav2 > li {
-      display: block;
-      float: left;
-      position: relative;
-      padding-left: 100px; }
-      .top-right-nav2 > li i {
-        vertical-align: middle;
-        display: inline-block;
-        margin-left: 0;
-        font-size: 2px;
-      padding-right: 10px; }
-      .top-right-nav2 > li > a {
-        display: block;
-        line-height: 60px;
-        padding: 0px 15px;
-        color: #ffffff; }
-        .top-right-nav2 > li > a img {
-          border: 2px solid rgba(255, 255, 255, 0.5);
-          margin-right: 0px;
-          width: 35px; }
+.primary-top-bar2{
+  top: 70px;
+  color: #455a64;
+  font-size: 18px;
 }
