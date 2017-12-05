@@ -1,5 +1,24 @@
 .primary-top-bar2{
   top: 70px;
   color: #455a64;
-  font-size: 18px;
+  text-align: center;
+  font-size: 17px;
+}
+@media (min-width: 900px){
+.primary-top-bar2{
+  top: 70px;
+  color: #455a64;
+  font-size: 17px;
+}
+.left-nav-toggle{
+  display: none;
+}
+}
+@media  (max-width: 899px) and (min-width: 767px){
+  .primary-top-bar2{
+    font-size: 12px;
+  }
+.left-nav-toggle{
+  display: none;
+}
 }
