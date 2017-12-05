@@ -1063,7 +1063,7 @@ body.nav-collapsed .metisMenu .sub-menu .sub-menu.in {
 ul.dropdown-menu.top-dropdown {
   right: 0;
   left: auto;
-  z-index: 9;}
+  z-index: 999;}
 
 .dropdown-menu.lg-dropdown {
   min-width: 280px; }
