@@ -3,6 +3,7 @@
   color: #455a64;
   text-align: center;
   font-size: 17px;
+  position: relative;
 }
 @media (min-width: 900px){
 .primary-top-bar2{
