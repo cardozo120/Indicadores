@@ -58,7 +58,7 @@ a.dt-button {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  margin-right: 0.333em;
+  margin-right: 1em;
   padding: 0.5em 1em;
   border-radius: 2px;
   cursor: pointer;
@@ -77,7 +77,7 @@ a.dt-button.disabled {
   color: #ccc;
   cursor: default;
   background-color: #1E88E5;
- 
+
 }
 button.dt-button:active:not(.disabled), button.dt-button.active:not(.disabled),
 div.dt-button:active:not(.disabled),
@@ -92,7 +92,7 @@ div.dt-button:active:not(.disabled):hover:not(.disabled),
 div.dt-button.active:not(.disabled):hover:not(.disabled),
 a.dt-button:active:not(.disabled):hover:not(.disabled),
 a.dt-button.active:not(.disabled):hover:not(.disabled) {
-  
+
   background-color: #3397ef;
 
 }
@@ -106,7 +106,7 @@ div.dt-button:hover:not(.disabled),
 a.dt-button:hover:not(.disabled) {
 
   background-color: #3397ef;
-  
+
 }
 
 .dt-button embed {

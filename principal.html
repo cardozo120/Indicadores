@@ -40,12 +40,14 @@
             <a class="admin-logo" href="principal.html">
 
 						</a>
+            <div class="top-left-nav">
             <div class="left-nav-collapsed" >
               <a  href="#" class="nav-collapsed"><i class="fa fa-bars"></i></a>
             </div>
             <div class="left-nav-toggle" >
 							<a  href="#" class="nav-collapsed"><i class="fa fa-bars"></i></a>
 						</div>
+              </div>
 					</div>
 					<div class="col2">
 						<ul class="list-inline top-right-nav">
@@ -63,11 +65,26 @@
 									</li>
 								</ul>
 							</li>
-              <li class="dropdown">
-								<a class="right-sidebar-toggle d-none-m" href="javascript:%20void(0);"><i class="fa fa-cog" aria-hidden="true"></i></i> <span class="nombre"> Configuración</span>  </a>
-							</li class="dropdown">
-              <li><a class="right-sidebar-toggle d-none-m" href="javascript:%20void(0);"><i class="fa fa-question-circle" aria-hidden="true"></i> <span class="nombre"> Ayuda</span>  </a>
-                </li>
+              <li class="dropdown avtar-dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-cog" aria-hidden="true"></i> <span class="nombre">Configuración</span>
+                </a>
+                <ul class="dropdown-menu top-dropdown">
+                  <li>
+                    <a class="dropdown-item" href="javascript:%20void(0);">Ir a Configuración</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown avtar-dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-question-circle" aria-hidden="true"></i> <span class="nombre">Ayuda</span>
+                </a>
+                <ul class="dropdown-menu top-dropdown">
+                  <li>
+                    <a class="dropdown-item" href="javascript:%20void(0);">Ir a Ayuda</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
 					</div>
 				</div>
@@ -78,23 +95,22 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-2">
-        <a href="#"><i class="fa fa-users" aria-hidden="true"></i> <span class="nombre">Usuarios</span> </a>
+        <a href="Usuarios.html"><i class="fa fa-users" aria-hidden="true"></i> <span class="nombre">Usuarios</span> </a>
       </div>
       <div class="col-md-2">
-        <a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i> <span class="nombre">KPI</span> </a>
+        <a href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="nombre">KPI</span> </a>
       </div>
       <div class="col-md-2">
-        <a href="#"><i class="fa fa-database" aria-hidden="true"></i><span class="nombre">Datos</span> </a>
+        <a href="Datos.html"><i class="fa fa-database" aria-hidden="true"></i><span class="nombre">Datos</span> </a>
       </div>
       <div class="col-md-2">
-        <a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> <span class="nombre">Informes</span> </a>
+        <a href="Informes.html"><i class="fa fa-line-chart" aria-hidden="true"></i> <span class="nombre">Informes</span> </a>
       </div>
       <div class="col-md-2">
-        <a href="#"><i class="fa fa-book" aria-hidden="true"></i> <span class="nombre">Reportes</span></a>
+        <a href="Reportes.html"><i class="fa fa-book" aria-hidden="true"></i> <span class="nombre">Reportes</span></a>
       </div>
     </div>
   </div>
-
 		<!-- ============================================================== -->
 		<!--                        Topbar End                              -->
 		<!-- ============================================================== -->
@@ -210,11 +226,11 @@
                         <li class="nav-heading"><span>Menu</span></li>
 
 						<li class="nav-item active"><a class="nav-link" href="principal.html"><i class="fa fa-home"></i> <span class="toggle-none">Dashboard </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-users"></i> <span class="toggle-none">Users </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-thumb-tack"></i> <span class="toggle-none">KPI </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-database"></i> <span class="toggle-none">Datos </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-line-chart"></i> <span class="toggle-none">Informes </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-book"> </i> <span class="toggle-none">Reportes </a></li>
+            <li class="nav-item"><a class="nav-link" href="Usuarios.html"><i class="fa fa-users"></i> <span class="toggle-none">Usuarios </a></li>
+            <li class="nav-item"><a class="nav-link" href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="toggle-none">KPI </a></li>
+            <li class="nav-item"><a class="nav-link" href="Datos.html"><i class="fa fa-database"></i> <span class="toggle-none">Datos </a></li>
+            <li class="nav-item"><a class="nav-link" href="Informes.html"><i class="fa fa-line-chart"></i> <span class="toggle-none">Informes </a></li>
+            <li class="nav-item"><a class="nav-link" href="Reportes.html"><i class="fa fa-book"> </i> <span class="toggle-none">Reportes </a></li>
 
                         <!-- <li class="nav-item"><a class="nav-link" href="javascript: void(0);" aria-expanded="true"><i class="fa fa-envelope-o"></i> <span class="toggle-none">Inbox<span class="fa arrow"></span></span></a>
                             <ul class="nav-second-level nav flex-column sub-menu" aria-expanded="true">
@@ -236,9 +252,12 @@
 		<!-- 						Content Start	 						-->
 		<!-- ============================================================== -->
         <section class="main-content container">
+          <div class="page-header">
+            <h2> <i class="fa fa-home"></i> Dashboard</h2>
+          </div>
             <div class="row">
 
-				<div class="col-md-3">
+				          <div class="col-md-3">
                     <div class="widget  bg-light">
                         <div class="row row-table ">
                             <div class="margin-b-30">
@@ -746,7 +765,7 @@
 			</div>
 
             <footer class="footer">
-                <span>Copyright &copy; 2017 Fixed Admin</span>
+                <span>Copyright &copy; 2017 CCEO Software Development</span>
             </footer>
 
         </section>

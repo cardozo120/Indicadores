@@ -63,7 +63,7 @@ strong, b {
   min-height: 100vh;
   padding: 30px;
   padding-bottom: 40px;
-  padding-top: 120px;
+  padding-top: 80px;
   position: relative;
   -moz-transition: margin-left 0.3s;
   -o-transition: margin-left 0.3s;
@@ -3050,8 +3050,25 @@ ul.tabs-nav > li > a {
   background: #5867dd; }
   .top-bar.primary-top-bar .top-right-nav > li > a {
     color: #fff; }
+
+    /*Hover Top Bar*/
+    @media (max-width: 991px) {
+      .top-left-nav a :hover{
+        color: #aaa;
+      }
+    }
     .top-bar.primary-top-bar .top-right-nav > li > a:hover {
-      color: #fff; }
+      background-color:  #08298A;
+    }
+    @media (max-width: 991px) {
+      .top-bar.primary-top-bar .top-right-nav > li > a:hover {
+        color: #aaa;
+      }
+      .top-bar.primary-top-bar .top-right-nav > li > a:hover {
+        background-color:  #fff;
+      }
+    }
+
     .top-bar.primary-top-bar .top-right-nav > li > a img {
       border: 2px solid rgba(0, 0, 0, 0.05); }
   .top-bar.primary-top-bar .search-form i {
@@ -4177,7 +4194,7 @@ figure {
 @media (max-width: 991px) {
   .main-content.container {
     margin-left: 0px;
-    padding-top: 120px; }
+    padding-top: 80px; }
 
   .main-sidebar-nav {
     margin-left: -240px;
@@ -4243,7 +4260,7 @@ figure {
 
   .main-content.container {
     padding: 15px 15px;
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 40px; }
 
   .primary-top-bar2{

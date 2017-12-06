@@ -17,6 +17,10 @@
     font-size: 12px;
   }
 }
-@media (max-width: 300px) and (min-width: 1px) {
 
+/*KPI*/
+.botones{
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
 }
