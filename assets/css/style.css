@@ -198,7 +198,7 @@ body.nav-collapsed .metisMenu .sub-menu .sub-menu.in {
   body.nav-collapsed .sidebar-nav .metisMenu li {
     position: relative; }
   body.nav-collapsed .sidebar-nav .metisMenu > li > ul {
-    position: absolute;
+    position: relative;
     left: 55px;
     top: 120px;
     min-width: 200px;
@@ -3037,6 +3037,14 @@ ul.tabs-nav > li > a {
   width: 100%;
   z-index: 9; }
 
+  .top-bar2 {
+    height: 60px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+
 
 .top-bar.primary-top-bar {
   background: #5867dd; }
@@ -3107,7 +3115,8 @@ ul.tabs-nav > li > a {
   margin: 0;
   padding: 0;
   float: right;
-  padding-right: 0px; }
+  padding-right: 0px;
+text-align: center;}
   .top-right-nav > li {
     display: block;
     float: left;
@@ -3565,6 +3574,7 @@ figure {
   max-width: 1170px; }
 
 @media (min-width: 1px) {
+
   .container-smooth {
     width: 100%; } }
 .btn-labeled {
@@ -4211,8 +4221,7 @@ figure {
     white-space: pre-wrap; }
 
   .admin-logo {
-    width: 60px;
-    margin-left: -5px;
+    width: 1px;
     float: left;
     border-right: 1px solid #dde6e9; }
 

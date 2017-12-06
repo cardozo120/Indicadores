@@ -11,15 +11,12 @@
   color: #455a64;
   font-size: 17px;
 }
-.left-nav-toggle{
-  display: none;
-}
 }
 @media  (max-width: 899px) and (min-width: 767px){
   .primary-top-bar2{
     font-size: 12px;
   }
-.left-nav-toggle{
-  display: none;
 }
+@media (max-width: 300px) and (min-width: 1px) {
+
 }
