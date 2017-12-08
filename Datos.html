@@ -14,6 +14,8 @@
         <link href="assets/lib/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css">
 		 <link href="assets/lib/datatables/buttons.dataTables.css" rel="stylesheet" type="text/css">
 
+        <!-- Jquery UI -->
+         <link href="assets/lib/jquery-ui/jquery-ui.css" rel="stylesheet">
         <!-- Custom Css-->
         <link href="assets/css/style.css" rel="stylesheet">
         <link  href="assets/css/custom.css" rel="stylesheet" >
@@ -261,106 +263,105 @@
                         </div>
                         <div class="card-block">
                           <div class="row">
-                            <div class="col">
-                            <div class="col-md-2 botones-derecha">
+                            <div class="col-md-3">
+                                </div>
+                            <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
                                   <i class="fa fa-plus" aria-hidden="true"></i>   <span>Agregar</span>
                               </div>
                             </div>
-                            <div class="col-md-2 botones-derecha">
+                            <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
                                   <i class="fa fa-cloud-upload"></i>   <span>Importar</span>
                                   <input type="file" class="upload">
                               </div>
                             </div>
-                            <div class="col-md-2 botones-derecha">
+                            <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
                                 <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
                               </div>
                               </div>
-                              </div>
-                              <div class="col">
-                            <div class="col-md-2 botones-izquierda">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
-                              </div>
+                              <div class="col-md-3">
+                                  </div>
+                        </div>
+                          <div class="row">
+                            <div class="col-md-3">
+                                </div>
+                            <div class="col-md-6 botones">
+                                <fieldset class="jquery-Ui-fieldset">
+                                    <label for="simple">Mostrar</label>
+                                    <select name="simple" id="simple">
+                                        <option selected="selected">Diario</option>
+                                        <option>Semanal</option>
+                                        <option>Mensual</option>
+                                    </select>
+                                </fieldset>
                             </div>
-                            <div class="col-md-2 botones-izquierda">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
-                              </div>
-                            </div>
-                            <div class="col-md-2 botones-izquierda">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
-                              </div>
-                            </div>
-                            </div>
+                            <div class="col-md-3">
+                                </div>
                           </div>
                             <div class="row">
-                              <div class="col-md-6">
-                                  <div class="card">
-                                      <div class="card-heading card-default">
-                                          Table basic
-                                      </div>
+                              <div class="col-md-1">
+                              </div>
+                              <div class="col-md-3 tabla2">
+                                <div class="card-heading card-default listakpi">
+                                    Lista de KPIs
+                                </div>
                                       <div class="card-block">
                                           <table class="table">
                                           <thead>
                                           <tr>
-                                              <th>#</th>
-                                              <th>First Name</th>
-                                              <th>Last Name</th>
-                                              <th>Username</th>
+                                              <th>ID</th>
+                                              <th>KPI</th>
                                           </tr>
                                           </thead>
                                           <tbody>
                                           <tr>
                                               <td>1</td>
                                               <td>Mark</td>
-                                              <td>Otto</td>
-                                              <td>@mdo</td>
                                           </tr>
                                           <tr>
                                               <td>2</td>
                                               <td>Jacob</td>
-                                              <td>Thornton</td>
-                                              <td>@fat</td>
-                                          </tr>
-                                          <tr>
-                                              <td>3</td>
-                                              <td>Larry</td>
-                                              <td>the Bird</td>
-                                              <td>@twitter</td>
                                           </tr>
                                           </tbody>
                                       </table>
                                        </div>
-                                  </div>
                               </div>
-                                        <div class="col-md-6">
+                              <div class="col-md-2 ">
+                                <div class="botonenmedio">
+                                  <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="botonenmedio">
+                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </div>
+                              </div>
+                                        <div class="col-md-5">
                                         <table id="datatable2" class="table table-striped dt-responsive nowrap">
                                                         <thead>
                                                             <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
+                                                                <th>Lunes</th>
+                                                                <th>Martes</th>
+                                                                <th>Miercoles</th>
                                                             </tr>
                                                         </thead>
 
                                                         <tbody>
                                                             <tr>
-                                                                <td>Tiger Nixon</td>
-                                                                <td>System Architect</td>
-                                                                <td>Edinburgh</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>200</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Garrett Winters</td>
-                                                                <td>Accountant</td>
-                                                                <td>Tokyo</td>
+                                                                <td></td>
+                                                                <td>200</td>
+                                                                <td>200</td>
                                                               </tr>
                                                         </tbody>
                                                     </table>
                                             </div>
+                                            <div class="col-md-1">
+                                              </div>
                                     </div>
                         </div>
                     </div>
@@ -404,6 +405,9 @@
 		<script src="assets/lib/datatables/vfs_fonts.js"></script>
 		<script src="assets/lib/datatables/buttons.html5.min.js"></script>
 
+    <!-- Jquery UI -->
+      <script src="assets/lib/jquery-ui/jquery-ui.min.js"></script>
+      <script src="assets/js/jquery.ui.custom.js"></script>
         <script>
             $(document).ready(function () {
                 $('#datatable').dataTable();
