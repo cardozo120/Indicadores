@@ -91,10 +91,10 @@
     <div class="top-bar2 primary-top-bar2">
     <div class="row">
       <div class="col-md-2 menu2"></div>
-      <div class="col-md-2 menu2">
+      <div class="col-md-2 menu2 ">
         <a href="Usuarios.html"><i class="fa fa-users" aria-hidden="true"></i> <span class="nombre">Usuarios</span> </a>
       </div>
-      <div class="col-md-2 menu2 ">
+      <div class="col-md-2 menu2">
         <a href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="nombre">KPI</span> </a>
       </div>
       <div class="col-md-2 menu2">
@@ -225,9 +225,9 @@
                     <li class="nav-heading"><span>Menu</span></li>
 
                     <li class="nav-item "><a class="nav-link" href="principal.html"><i class="fa fa-home"></i> <span class="toggle-none">Dashboard </a></li>
-                    <li class="nav-item"><a class="nav-link" href="Usuarios.html"><i class="fa fa-users"></i> <span class="toggle-none">Usuarios </a></li>
-                    <li class="nav-item active"><a class="nav-link" href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="toggle-none">KPI </a></li>
-                    <li class="nav-item"><a class="nav-link" href="Datos.html"><i class="fa fa-database"></i> <span class="toggle-none">Datos </a></li>
+                    <li class="nav-item "><a class="nav-link" href="Usuarios.html"><i class="fa fa-users"></i> <span class="toggle-none">Usuarios </a></li>
+                    <li class="nav-item"><a class="nav-link" href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="toggle-none">KPI </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="Datos.html"><i class="fa fa-database"></i> <span class="toggle-none">Datos </a></li>
                     <li class="nav-item"><a class="nav-link" href="Informes.html"><i class="fa fa-line-chart"></i> <span class="toggle-none">Informes </a></li>
                     <li class="nav-item"><a class="nav-link" href="Reportes.html"><i class="fa fa-book"> </i> <span class="toggle-none">Reportes </a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="javascript: void(0);" aria-expanded="true"><i class="fa fa-envelope-o"></i> <span class="toggle-none">Inbox<span class="fa arrow"></span></span></a>
@@ -251,74 +251,117 @@
 		<!-- ============================================================== -->
         <section class="main-content container">
             <div class="page-header">
-			  <h2> <i class="fa fa-bullseye" aria-hidden="true"></i> KPI</h2>
+			  <h2> <i class="fa fa-bullseye" aria-hidden="true"></i>Datos</h2>
 			</div>
 			    <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-heading card-default">
-                          Tabla de KPI
+                          Tabla de Datos
                         </div>
                         <div class="card-block">
                           <div class="row">
-                            <div class="col-md-3">
-                                </div>
-                            <div class="col-md-2 botones">
+                            <div class="col">
+                            <div class="col-md-2 botones-derecha">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
                                   <i class="fa fa-plus" aria-hidden="true"></i>   <span>Agregar</span>
                               </div>
                             </div>
-                            <div class="col-md-2 botones">
+                            <div class="col-md-2 botones-derecha">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
                                   <i class="fa fa-cloud-upload"></i>   <span>Importar</span>
                                   <input type="file" class="upload">
                               </div>
                             </div>
-                            <div class="col-md-2 botones">
+                            <div class="col-md-2 botones-derecha">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                  <i class="fa fa-plus" aria-hidden="true"></i>   <span>Categoria</span>
-                                  <input type="file" class="upload">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
+                              </div>
+                              </div>
+                              </div>
+                              <div class="col">
+                            <div class="col-md-2 botones-izquierda">
+                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
                               </div>
                             </div>
-                            <div class="col-md-3">
-                                </div>
+                            <div class="col-md-2 botones-izquierda">
+                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
+                              </div>
+                            </div>
+                            <div class="col-md-2 botones-izquierda">
+                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
+                              </div>
+                            </div>
+                            </div>
                           </div>
-                            <table id="datatable2" class="table table-striped dt-responsive nowrap">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Office</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Acciones</th>
+                            <div class="row">
+                              <div class="col-md-6">
+                                  <div class="card">
+                                      <div class="card-heading card-default">
+                                          Table basic
+                                      </div>
+                                      <div class="card-block">
+                                          <table class="table">
+                                          <thead>
+                                          <tr>
+                                              <th>#</th>
+                                              <th>First Name</th>
+                                              <th>Last Name</th>
+                                              <th>Username</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                          <tr>
+                                              <td>1</td>
+                                              <td>Mark</td>
+                                              <td>Otto</td>
+                                              <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                              <td>2</td>
+                                              <td>Jacob</td>
+                                              <td>Thornton</td>
+                                              <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                              <td>3</td>
+                                              <td>Larry</td>
+                                              <td>the Bird</td>
+                                              <td>@twitter</td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+                                       </div>
+                                  </div>
+                              </div>
+                                        <div class="col-md-6">
+                                        <table id="datatable2" class="table table-striped dt-responsive nowrap">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>Position</th>
+                                                                <th>Office</th>
+                                                            </tr>
+                                                        </thead>
 
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td>2011/04/25</td>
-                                                    <td <div class="acciones">
-                                                      <i class="fa fa-times" aria-hidden="true"></i> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
-                                                      </div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Garrett Winters</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>63</td>
-                                                    <td>2011/07/25</td>
-                                                    <td> <div class="acciones">
-                                                      <i class="fa fa-times" aria-hidden="true"></i> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></div></td>
-                                                  </tr>
-                                            </tbody>
-                                        </table>
-
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>Edinburgh</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garrett Winters</td>
+                                                                <td>Accountant</td>
+                                                                <td>Tokyo</td>
+                                                              </tr>
+                                                        </tbody>
+                                                    </table>
+                                            </div>
+                                    </div>
                         </div>
                     </div>
                 </div>
@@ -381,6 +424,7 @@
 					"paging":         false
 				} );
             });
+
 
         </script>
     </body>
