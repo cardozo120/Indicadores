@@ -3047,7 +3047,12 @@ ul.tabs-nav > li > a {
 
 
 .top-bar.primary-top-bar {
-  background: #5867dd; }
+  background: -webkit-linear-gradient(bottom, #5867dd 50%  , #929bdb 90%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #5867dd 50%  , #929bdb 90%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #5867dd 50%  , #929bdb 90%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top, #5867dd 50%  , #929bdb 90%);
+}
+
   .top-bar.primary-top-bar .top-right-nav > li > a {
     color: #fff; }
 
