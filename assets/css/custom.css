@@ -11,6 +11,23 @@
   background: linear-gradient(to top, #34bfa3 50%  , #93ead9 90%);
   color: #fff;
 }
+/*Tabla Datos*/
+.listakpi{
+  text-align: center;
+}
+.botonenmedio{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.botonenmedio i{
+margin-right: 30px;
+display: inline-block;x
+}
+.primero{
+margin-left: 25%;
+}
 
 @media (min-width: 992px){
 .primary-top-bar2{
@@ -21,6 +38,9 @@
 }
 .primary-top-bar2 a{
   color: white;
+}
+.primero{
+margin-left: 33%;
 }
 }
 
@@ -39,7 +59,16 @@
   }
 }
 
-
+@media (max-width: 766px) {
+  .primero{
+  margin-left: 38%;
+  }
+}
+@media (max-width: 600px) {
+  .primero{
+  margin-left: 27%;
+  }
+}
 /*Tablas*/
 .botones{
   width: 100%;
@@ -59,15 +88,4 @@ cursor: pointer;
   font-size: 16px;
   margin-right: 20px;
   cursor: pointer;
-}
-
-/*Tabla Datos*/
-.listakpi{
-  text-align: center;
-}
-.botonenmedio{
-  padding-top: 70px;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 40px;
 }
