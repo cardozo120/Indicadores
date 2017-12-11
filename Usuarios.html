@@ -14,9 +14,14 @@
         <link href="assets/lib/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css">
 		 <link href="assets/lib/datatables/buttons.dataTables.css" rel="stylesheet" type="text/css">
 
+     <!-- Sweet Alerts -->
+     <link href="assets/lib/sweet-alerts2/sweetalert2.min.css" rel="stylesheet">
+
         <!-- Custom Css-->
         <link href="assets/css/style.css" rel="stylesheet">
         <link  href="assets/css/custom.css" rel="stylesheet" >
+
+
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -265,7 +270,7 @@
                                 </div>
                             <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                  <i class="fa fa-plus" aria-hidden="true"></i>   <span>Agregar</span>
+                                  <i class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#Agregar"></i>   <span>Agregar</span>
                               </div>
                             </div>
                             <div class="col-md-2 botones">
@@ -324,9 +329,6 @@
             </div>
 
 
-
-
-
             <footer class="footer">
                 <span>Copyright &copy; 2017 CCEO Software Development</span>
             </footer>
@@ -336,7 +338,98 @@
         <!-- ============================================================== -->
 		<!-- 						Content End		 						-->
 		<!-- ============================================================== -->
+    <div class="modal fade" id="Agregar">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
+   <div class="card-heading card-default">
+       Agregar Informacion
+   </div>
+  </div>
+          <div class="modal-body">
 
+                  <form role="form">
+                    <div class="row">
+                      <div class="col-sm-3">
+                      </div>
+                      <div class="col-sm-6">
+                      <div class="form-group">
+                        <p style="font-size:18px; text-align: center;" >Imagen</p>
+                        <div class="fileinput-new" data-provides="fileinput">
+                          <div class="fileinput-preview" data-trigger="fileinput" style="width: 200px; height:150px;"></div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                </div>
+                                <div class="col-sm-6">
+                                  <span class="btn btn-primary  btn-file">
+                                    <span class="fileinput-new">Seleccionar</span>
+                                    <span class="fileinput-exists">Cambiar</span>
+                                    <input type="file" id="image" name="image">
+                                      </span>
+                                </div>
+                                <div class="col-sm-3">
+                                </div>
+                            </div>
+                          <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remover</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                      </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+
+                                <div class="card-block">
+                                    <form id="signupForm" method="post" class="form-horizontal" action="">
+                      <div class="form-group">
+                        <label for="firstname">Primer Nombre</label>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Primer Nombre" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="lastname">Apellidos</label>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email">Correo Electronico</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Correo Electronico" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="confirm_password">Repetir Contraseña</label>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirmar Contraseña" />
+                      </div>
+                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary ">Agregar</button>
+                  </div>
+
+          </div>
+      </div>
+  </div>
+</div>
 
 
         <!-- Common Plugins -->

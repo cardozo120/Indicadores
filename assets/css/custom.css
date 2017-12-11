@@ -26,9 +26,11 @@ margin-right: 30px;
 display: inline-block;x
 }
 .primero{
-margin-left: 25%;
+margin-left: 32%;
 }
-
+.calendario{
+  margin-left: 10%;
+}
 @media (min-width: 992px){
 .primary-top-bar2{
   position: fixed;
@@ -40,7 +42,10 @@ margin-left: 25%;
   color: white;
 }
 .primero{
-margin-left: 33%;
+margin-left: 42%;
+}
+.calendario{
+  margin-left: 31%;
 }
 }
 
@@ -61,12 +66,18 @@ margin-left: 33%;
 
 @media (max-width: 766px) {
   .primero{
-  margin-left: 38%;
+  margin-left: 43%;
+  }
+  .calendario{
+    margin-left: 35%;
   }
 }
 @media (max-width: 600px) {
   .primero{
-  margin-left: 27%;
+  margin-left: 35%;
+  }
+  .calendario{
+    margin-left: 20%;
   }
 }
 /*Tablas*/

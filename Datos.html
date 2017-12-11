@@ -14,8 +14,15 @@
         <link href="assets/lib/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css">
 		 <link href="assets/lib/datatables/buttons.dataTables.css" rel="stylesheet" type="text/css">
 
+      <!-- Sweet Alerts -->
+      <link href="assets/lib/sweet-alerts2/sweetalert2.min.css" rel="stylesheet">
+
         <!-- Jquery UI -->
          <link href="assets/lib/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+         <!-- DataTimePicker -->
+             <link href="assets/lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
         <!-- Custom Css-->
         <link href="assets/css/style.css" rel="stylesheet">
         <link  href="assets/css/custom.css" rel="stylesheet" >
@@ -263,13 +270,8 @@
                         </div>
                         <div class="card-block">
                           <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 </div>
-                            <div class="col-md-2 botones">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                  <i class="fa fa-plus" aria-hidden="true"></i>   <span>Agregar</span>
-                              </div>
-                            </div>
                             <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
                                   <i class="fa fa-cloud-upload"></i>   <span>Importar</span>
@@ -278,10 +280,10 @@
                             </div>
                             <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                <i class="fa fa-floppy-o" aria-hidden="true"></i>   <span>Guardar</span>
+                                <i class="fa fa-floppy-o" aria-hidden="true" id="success-alert"></i>   <span>Guardar</span>
                               </div>
                               </div>
-                              <div class="col-md-3">
+                              <div class="col-md-4">
                                   </div>
                         </div>
                           <div class="row">
@@ -337,13 +339,20 @@
                                               Lista de KPIs
                                           </div>
                                           <div class="row" >
+                                            <div class="calendario">
+                                              <div class="form-group">
+                            										<div class="input-group m-b">
+                            										<span class="input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                            										<input type="text" name="birthdate" value="10/24/1984" />
+                            										</div>
+                                                </div>
+                                                  </div>
+                                        </div>
+                                                  <div class="row" >
                                               <div class="botonenmedio primero">
-                                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                                              </div>
-                                            <div class="botonenmedio">
-                                              <i class="fa fa-calendar" aria-hidden="true"></i>
+                                              <i class="fa fa-arrow-left" aria-hidden="true"></i>
                                             </div>
-                                            <div class="botonenmedio ultimo">
+                                            <div class="botonenmedio ">
                                               <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                             </div>
                                           </div>
@@ -414,6 +423,13 @@
 		<script src="assets/lib/datatables/vfs_fonts.js"></script>
 		<script src="assets/lib/datatables/buttons.html5.min.js"></script>
 
+    <!-- DataTimePicker -->
+        <script type="text/javascript" src="assets/lib/bootstrap-daterangepicker/moment.js"></script>
+		<script type="text/javascript" src="assets/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!--Sweet Alerts-->
+    <script src="assets/lib/sweet-alerts2/sweetalert2.min.js"></script>
+
     <!-- Jquery UI -->
       <script src="assets/lib/jquery-ui/jquery-ui.min.js"></script>
       <script src="assets/js/jquery.ui.custom.js"></script>
@@ -437,8 +453,62 @@
 					"paging":         false
 				} );
             });
-
-
         </script>
+        <script>
+            $(document).ready(function () {
+              //Success
+              $('#success-alert').click(function () {
+                  swal({
+                      title: "¿Estas Seguro?",
+                      text: "",
+                      type: "success",
+                      showCancelButton: true,
+                      cancelButtonClass: 'btn-secondary ',
+                      confirmButtonClass: 'btn-success',
+                      confirmButtonText: 'Success!'
+                  });
+              });
+              });
+          </script>
+          <script>
+              $(function() {
+          /* DataRange */
+          $('input[name="daterange"]').daterangepicker();
+
+
+          /* Datarange2 */
+          $('input[name="daterange2"]').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+              format: 'MM/DD/YYYY h:mm A'
+            }
+          });
+
+          /* BirthDate */
+          $('input[name="birthdate"]').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true
+          },
+          function(start, end, label) {
+            var years = moment().diff(start, 'years');
+            alert("You are " + years + " years old.");
+          });
+
+          /* DataFilter */
+          $('input[name="datefilter"]').daterangepicker({
+              autoUpdateInput: false,
+              locale: {
+                cancelLabel: 'Clear'
+              }
+            });
+            $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+              $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+            });
+            $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+              $(this).val('');
+           });
+         });
+     </script>
     </body>
 </html>
