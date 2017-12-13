@@ -14,17 +14,18 @@
         <link href="assets/lib/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css">
 		 <link href="assets/lib/datatables/buttons.dataTables.css" rel="stylesheet" type="text/css">
 
-        <!-- Sweet Alerts -->
-        <link href="assets/lib/sweet-alerts2/sweetalert2.min.css" rel="stylesheet">
+      <!-- Sweet Alerts -->
+      <link href="assets/lib/sweet-alerts2/sweetalert2.min.css" rel="stylesheet">
 
         <!-- Jquery UI -->
          <link href="assets/lib/jquery-ui/jquery-ui.css" rel="stylesheet">
 
+         <!-- DataTimePicker -->
+             <link href="assets/lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
         <!-- Custom Css-->
         <link href="assets/css/style.css" rel="stylesheet">
         <link  href="assets/css/custom.css" rel="stylesheet" >
-
-
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -99,10 +100,10 @@
     <div class="top-bar2 primary-top-bar2">
     <div class="row">
       <div class="col-md-2 menu2"></div>
-      <div class="col-md-2 menu2">
+      <div class="col-md-2 menu2 ">
         <a href="Usuarios.html"><i class="fa fa-users" aria-hidden="true"></i> <span class="nombre">Usuarios</span> </a>
       </div>
-      <div class="col-md-2 menu2 ">
+      <div class="col-md-2 menu2">
         <a href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="nombre">KPI</span> </a>
       </div>
       <div class="col-md-2 menu2">
@@ -233,10 +234,10 @@
                     <li class="nav-heading"><span>Menu</span></li>
 
                     <li class="nav-item "><a class="nav-link" href="principal.html"><i class="fa fa-home"></i> <span class="toggle-none">Dashboard </a></li>
-                    <li class="nav-item"><a class="nav-link" href="Usuarios.html"><i class="fa fa-users"></i> <span class="toggle-none">Usuarios </a></li>
-                    <li class="nav-item active"><a class="nav-link" href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="toggle-none">KPI </a></li>
-                    <li class="nav-item"><a class="nav-link" href="Datos.html"><i class="fa fa-database"></i> <span class="toggle-none">Datos </a></li>
-                    <li class="nav-item"><a class="nav-link" href="Informes.html"><i class="fa fa-line-chart"></i> <span class="toggle-none">Informes </a></li>
+                    <li class="nav-item "><a class="nav-link" href="Usuarios.html"><i class="fa fa-users"></i> <span class="toggle-none">Usuarios </a></li>
+                    <li class="nav-item"><a class="nav-link" href="KPI.html"><i class="fa fa-bullseye" aria-hidden="true"></i> <span class="toggle-none">KPI </a></li>
+                    <li class="nav-item "><a class="nav-link" href="Datos.html"><i class="fa fa-database"></i> <span class="toggle-none">Datos </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="Informes.html"><i class="fa fa-line-chart"></i> <span class="toggle-none">Informes </a></li>
                     <li class="nav-item"><a class="nav-link" href="Reportes.html"><i class="fa fa-book"> </i> <span class="toggle-none">Reportes </a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="javascript: void(0);" aria-expanded="true"><i class="fa fa-envelope-o"></i> <span class="toggle-none">Inbox<span class="fa arrow"></span></span></a>
                         <ul class="nav-second-level nav flex-column sub-menu" aria-expanded="true">
@@ -259,79 +260,220 @@
 		<!-- ============================================================== -->
         <section class="main-content container">
             <div class="page-header">
-			  <h2> <i class="fa fa-bullseye" aria-hidden="true"></i> KPI</h2>
+			  <h2> <i class="fa fa-bullseye" aria-hidden="true"></i>Informes</h2>
 			</div>
 			    <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-heading card-default">
-                          Tabla de KPI
+
                         </div>
                         <div class="card-block">
                           <div class="row">
-                            <div class="col-md-3">
+
+                            <div class="col-md-2 botones">
+                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                <i class="fa fa-floppy-o" aria-hidden="true" id="success-alert"></i>   <span>Guardar</span>
+                              </div>
+                              </div>
+                              <div class="col-md-10">
+                                  </div>
+                        </div>
+                            <div class="row">
+                              <div class="col-md-1">
+                              </div>
+                              <div class="col-md-2">
+                                <div class="card-heading card-default listakpi">
+                                    Ejemplos de Reportes
                                 </div>
-                            <div class="col-md-2 botones">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                <i class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#Agregar-KPI"></i>   <span>Agregar</span>
-                              </div>
-                            </div>
-                            <div class="col-md-2 botones">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                  <i class="fa fa-cloud-upload"></i>   <span>Importar</span>
-                                  <input type="file" class="upload">
-                              </div>
-                            </div>
-                            <div class="col-md-2 botones">
-                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                <i class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#Agregar-Categoria"></i>   <span>Categoria</span>
-                              </div>
-                            </div>
-                            <div class="col-md-3">
+                                <div class="row" >
+                                    <div class="col-md-12">
+                                      <h5><small>Selecciona las Fechas</small></h5>
+                    									<div class="form-group">
+                    										<div class="input-group m-b">
+                    											<span class="input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                    											<input type="text" class="form-control" name="daterange" value="01/01/2015 - 01/31/2015" />
+                                                            </div>
+                    									</div>
+                                      </div>
+                                  </div>
+
+                                <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Reportes</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Reporte 1</td>
+                                </tr>
+                                <tr>
+                                    <td>Reporte 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Reporte 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Reporte 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Reporte 5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                                  </div>
+                                  <div class="col-md-1">
+                                  </div>
+                              <div class="col-md-8 tabla2">
+                                <div class="card-heading card-default listakpi">
+                                    Reportes
                                 </div>
-                          </div>
+                                      <div class="card-block">
+                                      <table id="datatable2" class="table table-striped dt-responsive nowrap">
+                                                      <thead>
+                                                          <tr>
+                                                              <th>ID</th>
+                                                              <th>Nombre</th>
+                                                              <th>Frecuencia</th>
+                                                              <th>Total</th>
+                                                          </tr>
+                                                      </thead>
 
-                            <table id="datatable2" class="table table-striped dt-responsive nowrap">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Office</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Acciones</th>
-
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td>2011/04/25</td>
-                                                    <td <div class="acciones">
-                                                      <i class="fa fa-times" aria-hidden="true"></i> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
-                                                      </div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Garrett Winters</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>63</td>
-                                                    <td>2011/07/25</td>
-                                                    <td> <div class="acciones">
-                                                      <i class="fa fa-times" aria-hidden="true"></i> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></div></td>
-                                                  </tr>
-                                            </tbody>
-                                        </table>
-
+                                                      <tbody>
+                                                          <tr>
+                                                              <td>1</td>
+                                                              <td>Ventas</td>
+                                                              <td>Diario</td>
+                                                              <th>400</th>
+                                                          </tr>
+                                                          <tr>
+                                                              <td>2</td>
+                                                              <td>Compras</td>
+                                                              <td>Diario</td>
+                                                              <th>500</th>
+                                                            </tr>
+                                                      </tbody>
+                                                  </table>
+                                       </div>
+                              </div>
+                                    </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
 
+              <div class="col-md-2 botones">
+                <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                  <i class="fa fa-floppy-o" aria-hidden="true" id="success-alert"></i>   <span>Guardar</span>
+                </div>
+                </div>
+                <div class="col-md-10">
+                    </div>
+
+            </div>
+
+            <div class="row">
+                  <div class="col-md-12">
+                      <div class="card">
+                          <div class="card-heading card-default">
+
+                          </div>
+                          <div class="card-block">
+                            <div class="row">
+
+                              <div class="col-md-2 botones">
+                                <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                  <i class="fa fa-floppy-o" aria-hidden="true" id="success-alert"></i>   <span>Guardar</span>
+                                </div>
+                                </div>
+                                <div class="col-md-10">
+                                    </div>
+                          </div>
+                              <div class="row">
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-2">
+                                  <div class="card-heading card-default listakpi">
+                                      Ejemplos de Reportes
+                                  </div>
+                                  <div class="row" >
+                                      <div class="col-md-12">
+                                        <h5><small>Selecciona las Fechas</small></h5>
+                      									<div class="form-group">
+                      										<div class="input-group m-b">
+                      											<span class="input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                      											<input type="text" class="form-control" name="daterange" value="01/01/2015 - 01/31/2015" />
+                                                              </div>
+                      									</div>
+                                        </div>
+                                    </div>
+
+                                  <table class="table">
+                                  <thead>
+                                  <tr>
+                                      <th>Reportes</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <td>Reporte 1</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Reporte 2</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Reporte 3</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Reporte 4</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Reporte 5</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                <div class="col-md-8 tabla2">
+                                  <div class="card-heading card-default listakpi">
+                                      Reportes
+                                  </div>
+                                        <div class="card-block">
+                                        <table id="datatable2" class="table table-striped dt-responsive nowrap">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ID</th>
+                                                                <th>Nombre</th>
+                                                                <th>Frecuencia</th>
+                                                                <th>Total</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Ventas</td>
+                                                                <td>Diario</td>
+                                                                <th>400</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>Compras</td>
+                                                                <td>Diario</td>
+                                                                <th>500</th>
+                                                              </tr>
+                                                        </tbody>
+                                                    </table>
+                                         </div>
+                                </div>
+                                      </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
 
 
@@ -345,118 +487,7 @@
         <!-- ============================================================== -->
 		<!-- 						Content End		 						-->
 		<!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- 						Pop up Start	 						-->
-    <!-- ============================================================== -->
-    <div class="modal fade" id="Agregar-KPI">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
-    <div class="card-heading card-default">
-       Agregar KPI
-    </div>
-    </div>
-          <div class="modal-body">
 
-                  <form role="form">
-
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-
-                                <div class="card-block">
-                                    <form id="signupForm" method="post" class="form-horizontal" action="">
-
-                                      <div class="form-group">
-                      <label>Insertar Imagen</label>
-
-                        <div class="fileinput fileinput-new input-group col-md-12" data-provides="fileinput">
-                          <div class="form-control" data-trigger="fileinput"><span class="fileinput-filename"></span></div>
-                          <span class="input-group-addon btn btn-primary btn-file ">
-                          <span class="fileinput-new">Seleccionar</span>
-                          <span class="fileinput-exists">Cambiar</span>
-                          <input type="file"  name="image">
-                          </span>
-                          <a href="#" class="input-group-addon btn btn-danger  hover fileinput-exists" data-dismiss="fileinput">Remover</a>
-                        </div>
-                        </div>
-                      <div class="form-group">
-                        <label for="firstname">Nombre</label>
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre" />
-                      </div>
-
-                      <div class="form-group">
-                          <label>Frecuencia</label>
-                              <select name="account" class="form-control m-b">
-                                  <option>Diario</option>
-                                  <option>Semanal</option>
-                                  <option>Mensual</option>
-                                  <option>Anual</option>
-                              </select>
-                      </div>
-
-                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                      <button type="button" class="btn btn-primary  cursor">Avanzado</button>
-                    </div>
-
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <button type="button" class="btn btn-primary cerrar cursor">Cerrar</button>
-                      <button type="button" class="btn btn-primary cursor">Agregar</button>
-                  </div>
-
-          </div>
-      </div>
-    </div>
-    </div>
-
-    <div class="modal fade" id="Agregar-Categoria">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-    <button type="button" class="close " data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
-    <div class="card-heading card-default">
-    Agregar Grupo
-    </div>
-    </div>
-      <div class="modal-body">
-
-              <form role="form">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
-
-                            <div class="card-block">
-                                <form id="signupForm" method="post" class="form-horizontal" action="">
-                                  <div class="input-group m-b">
-                                      <span class="input-group-addon"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                      <input type="text" placeholder="Categoria" class="form-control">
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </form>
-              <hr>
-              <div class="text-center">
-                <button type="button" class="btn btn-primary cerrar cursor">Cerrar</button>
-                  <button type="button" class="btn btn-primary cursor">Agregar</button>
-              </div>
-
-      </div>
-    </div>
-    </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- 						Pop up End	 						-->
-    <!-- ============================================================== -->
 
 
         <!-- Common Plugins -->
@@ -480,13 +511,16 @@
 		<script src="assets/lib/datatables/vfs_fonts.js"></script>
 		<script src="assets/lib/datatables/buttons.html5.min.js"></script>
 
+    <!-- DataTimePicker -->
+        <script type="text/javascript" src="assets/lib/bootstrap-daterangepicker/moment.js"></script>
+		<script type="text/javascript" src="assets/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+
     <!--Sweet Alerts-->
     <script src="assets/lib/sweet-alerts2/sweetalert2.min.js"></script>
 
     <!-- Jquery UI -->
       <script src="assets/lib/jquery-ui/jquery-ui.min.js"></script>
       <script src="assets/js/jquery.ui.custom.js"></script>
-
         <script>
             $(document).ready(function () {
                 $('#datatable').dataTable();
@@ -507,7 +541,62 @@
 					"paging":         false
 				} );
             });
-
         </script>
+        <script>
+            $(document).ready(function () {
+              //Success
+              $('#success-alert').click(function () {
+                  swal({
+                      title: "¿Estas Seguro?",
+                      text: "",
+                      type: "success",
+                      showCancelButton: true,
+                      cancelButtonClass: 'btn-secondary ',
+                      confirmButtonClass: 'btn-success',
+                      confirmButtonText: 'Success!'
+                  });
+              });
+              });
+          </script>
+          <script>
+              $(function() {
+          /* DataRange */
+          $('input[name="daterange"]').daterangepicker();
+
+
+          /* Datarange2 */
+          $('input[name="daterange2"]').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+              format: 'MM/DD/YYYY h:mm A'
+            }
+          });
+
+          /* BirthDate */
+          $('input[name="birthdate"]').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true
+          },
+          function(start, end, label) {
+            var years = moment().diff(start, 'years');
+            alert("You are " + years + " years old.");
+          });
+
+          /* DataFilter */
+          $('input[name="datefilter"]').daterangepicker({
+              autoUpdateInput: false,
+              locale: {
+                cancelLabel: 'Clear'
+              }
+            });
+            $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+              $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+            });
+            $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+              $(this).val('');
+           });
+         });
+     </script>
     </body>
 </html>
