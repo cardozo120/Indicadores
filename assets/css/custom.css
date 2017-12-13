@@ -31,6 +31,11 @@ margin-left: 32%;
 .calendario{
   margin-left: 10%;
 }
+
+.btn-primary{
+  cursor: pointer;
+  margin-right: 15px;
+}
 @media (min-width: 992px){
 .primary-top-bar2{
   position: fixed;
@@ -48,6 +53,7 @@ margin-left: 42%;
   margin-left: 31%;
 }
 }
+
 
 @media  (max-width: 991px) and (min-width: 767px){
   .primary-top-bar2{
@@ -72,12 +78,21 @@ margin-left: 42%;
     margin-left: 35%;
   }
 }
+@media (min-width:601px) {
+  .cerrar{
+display: none;
+  }
+}
 @media (max-width: 600px) {
   .primero{
   margin-left: 35%;
   }
   .calendario{
     margin-left: 20%;
+  }
+
+  .close{
+    display: none;
   }
 }
 /*Tablas*/

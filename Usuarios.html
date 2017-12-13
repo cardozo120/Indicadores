@@ -270,7 +270,7 @@
                                 </div>
                             <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                  <i class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#Agregar"></i>   <span>Agregar</span>
+                                  <i class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#Agregar-Usuario"></i>   <span>Agregar</span>
                               </div>
                             </div>
                             <div class="col-md-2 botones">
@@ -281,7 +281,7 @@
                             </div>
                             <div class="col-md-2 botones">
                               <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                  <i class="fa fa-plus" aria-hidden="true"></i>   <span>Grupo</span>
+                                <i class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#Agregar-Grupo"></i>   <span>Grupo</span>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -338,7 +338,11 @@
         <!-- ============================================================== -->
 		<!-- 						Content End		 						-->
 		<!-- ============================================================== -->
-    <div class="modal fade" id="Agregar">
+
+    <!-- ============================================================== -->
+<!-- 						Pop up Start	 						-->
+<!-- ============================================================== -->
+    <div class="modal fade" id="Agregar-Usuario">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
   <div class="modal-header">
@@ -423,6 +427,7 @@
                   </form>
                   <hr>
                   <div class="text-center">
+                    <button type="button" class="btn btn-primary cerrar">Cerrar</button>
                       <button type="button" class="btn btn-primary ">Agregar</button>
                   </div>
 
@@ -430,6 +435,49 @@
       </div>
   </div>
 </div>
+
+<div class="modal fade" id="Agregar-Grupo">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close " data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
+<div class="card-heading card-default">
+   Agregar Grupo
+</div>
+</div>
+      <div class="modal-body">
+
+              <form role="form">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+
+                            <div class="card-block">
+                                <form id="signupForm" method="post" class="form-horizontal" action="">
+                                  <div class="input-group m-b">
+                                      <span class="input-group-addon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                      <input type="text" placeholder="Grupo" class="form-control">
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+              </form>
+              <hr>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary cerrar">Cerrar</button>
+                  <button type="button" class="btn btn-primary ">Agregar</button>
+              </div>
+
+      </div>
+  </div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- 						Pop up End	 						-->
+<!-- ============================================================== -->
 
 
         <!-- Common Plugins -->
