@@ -33,9 +33,12 @@ margin-left: 32%;
 }
 
 .btn-primary{
-  cursor: pointer;
   margin-right: 15px;
 }
+.cursor{
+  cursor: pointer;
+}
+
 @media (min-width: 992px){
 .primary-top-bar2{
   position: fixed;
@@ -93,6 +96,9 @@ display: none;
 
   .close{
     display: none;
+  }
+  .fileinput-preview{
+    margin-left:20%;
   }
 }
 /*Tablas*/
