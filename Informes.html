@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Reportes</title>
+        <title>Informes</title>
 
         <!-- Common Plugins -->
         <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +26,9 @@
         <!-- Custom Css-->
         <link href="assets/css/style.css" rel="stylesheet">
         <link  href="assets/css/custom.css" rel="stylesheet" >
+
+        <!-- Morris Chart -->
+        <link href="assets/lib/morris/morris-0.4.3.min.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -260,199 +263,185 @@
 		<!-- ============================================================== -->
         <section class="main-content container">
             <div class="page-header">
-			  <h2> <i class="fa fa-book"> </i>Reportes</h2>
+			  <h2> <i class="fa fa-line-chart" aria-hidden="true"></i> </i>Informes</h2>
 			</div>
+
 			    <div class="row">
                 <div class="col-md-12">
                     <div class="card">
+                      <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card-heading card-default listakpi">
+                              Generar Informe
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                      </div>
                         <div class="card-heading card-default">
                         </div>
                         <div class="card-block">
                         <div class="row">
-                          <div class="col-md-5">
+                          <div class="col-md-1">
+                          </div>
+                          <div class="col-md-4 botones">
+                            <div class="col-md-12">
+                              <div class="checkbox checkbox-inline checkbox-primary">
+                                <input id="checkbox11" type="checkbox" checked="">
+                                <label for="checkbox11">Activar</label>
                               </div>
-                          <div class="col-md-2 botones">
-                            <div class="fileupload btn btn-primary btn-icon margin-r-5" style="margin-top:15px;">
-                            <a  class="Rguardados" href="#Rguardados"><i class="fa fa-arrow-down" aria-hidden="true" ></i>   <span>Reportes Guardados</span></a>
                             </div>
+                            <div class="col-md-12">
+                            <fieldset class="jquery-Ui-fieldset">
+                                <label for="simple1">Seleccionar KPI</label>
+                                <select name="simple1" disabled="disabled" id="simple1">
+                                    <option selected="selected">KPI1</option>
+                                    <option>KPI2</option>
+                                    <option>KPI3</option>
+                                </select>
+                            </fieldset>
                             </div>
-                            <div class="col-md-5">
+                          </div>
+                          <div class="col-md-4 botones">
+                              <div class="col-md-12">
+                                <div class="checkbox checkbox-inline checkbox-success">
+                                  <input id="checkbox10" type="checkbox" checked="">
+                                  <label for="checkbox10">Activar</label>
                                 </div>
-
+                              </div>
+                              <div class="col-md-12">
+                                <fieldset class="jquery-Ui-fieldset">
+                                    <label for="simple2">Comparar KPI</label>
+                                    <select name="simple2" disabled="disabled" id="simple2">
+                                        <option selected="selected">KPI1</option>
+                                        <option>KPI2</option>
+                                        <option>KPI3</option>
+                                    </select>
+                                </fieldset>
+                              </div>
+                          </div>
+                          <div class="col-md-3 botones">
+                            <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                              <i class="fa fa-cog" aria-hidden="true" data-toggle="modal" data-target="#Configurar"></i>   <span class="nombre">Configuración</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                          </div>
+                          <div class="col-md-3 botones">
+                              <div class="col-md-12 botones">
+                                <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                  <i class="fa fa-plus-circle" aria-hidden="true" id="success-alert1"></i>   <span>Generar Informe</span>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="col-md-12 botones">
+                              <div class="fileupload btn btn-primary btn-icon margin-r-5">
+                                <i class="fa fa-floppy-o" aria-hidden="true" id="success-alert"></i>   <span>Guardar Vista</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                          </div>
                         </div>
                             <div class="row">
                               <div class="col-md-1">
                               </div>
                               <div class="col-md-3">
                                 <div class="card-heading card-default listakpi">
-                                    Ejemplos de Reportes
+                                    Vistas
                                 </div>
-                                <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Reportes</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Reporte 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Reporte 2</td>
-                                </tr>
-                                <tr>
-                                    <td>Reporte 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Reporte 4</td>
-                                </tr>
-                                <tr>
-                                    <td>Reporte 5</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                                  </div>
+                                <table id="datatable" class="table table-striped dt-responsive nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Vista</th>
+
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Vista 1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vista 2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vista 3</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                            </div>
                                   <div class="col-md-1">
                                   </div>
                               <div class="col-md-7 tabla2">
                                 <div class="card-heading card-default listakpi">
-                                    Tabla de Reportes
+                                    Informes
                                 </div>
                                 <div class="row">
-                                  <div class="col-md-1">
-                                  </div>
-                                  <div class="col-md-5 botones">
-                                    <div class="fileupload btn btn-primary btn-icon margin-r-5">
-
-                                      <i class="fa fa-cog" aria-hidden="true" data-toggle="modal" data-target="#Configurar"></i>   <span class="nombre">Configuración</span>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-heading card-default">
+                                                Line chart
+                                            </div>
+                                            <div class="card-block">
+                                                <div class="morris-chart-content">
+                                                     <div id="morris-line-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-heading card-default">
+                                                Bar chart example
+                                            </div>
+                                            <div class="card-block">
+                                                <div class="morris-chart-content">
+                                                     <div id="morris-bar-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 botones">
-                                  <div class="fileupload btn btn-primary btn-icon margin-r-5">
-                                    <i class="fa fa-floppy-o" aria-hidden="true" id="success-alert"></i>   <span>Guardar</span>
-                                  </div>
-                                  </div>
-                                <div class="col-md-1">
+                                <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-heading card-default">
+                                    Donut chart
                                 </div>
+                                <div class="card-block">
+                                    <div class="morris-chart-content">
+                                         <div id="morris-donut-chart"></div>
+                                    </div>
                                 </div>
-                                      <div class="card-block">
-                                      <table id="datatable3" class="table table-striped dt-responsive nowrap">
-                                                      <thead>
-                                                          <tr>
-                                                              <th>ID</th>
-                                                              <th>Nombre</th>
-                                                              <th>Frecuencia</th>
-                                                              <th>Total</th>
-                                                          </tr>
-                                                      </thead>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-heading card-default">
+                                    Area chart
+                                </div>
+                                <div class="card-block">
+                                    <div class="morris-chart-content">
+                                         <div id="morris-area-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                                      <tbody>
-                                                          <tr>
-                                                              <td>1</td>
-                                                              <td>Ventas</td>
-                                                              <td>Diario</td>
-                                                              <th>400</th>
-                                                          </tr>
-                                                          <tr>
-                                                              <td>2</td>
-                                                              <td>Compras</td>
-                                                              <td>Diario</td>
-                                                              <th>500</th>
-                                                            </tr>
-                                                      </tbody>
-                                                  </table>
-                                       </div>
                               </div>
                                     </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="page-header" >
-			  <h2 id="Rguardados"> <i class="fa fa-book"> </i>Reportes Guardados</h2>
-			</div>
-            <div class="row">
-                  <div class="col-md-12">
-                      <div class="card">
-                          <div class="card-heading card-default">
-
-                          </div>
-                          <div class="card-block">
-                              <div class="row">
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-2">
-                                  <div class="card-heading card-default listakpi">
-                                      Reportes Guardados
-                                  </div>
-                                  <table class="table">
-                                  <thead>
-                                  <tr>
-                                      <th>Reportes</th>
-                                  </tr>
-                                  </thead>
-                                  <tbody>
-                                  <tr>
-                                      <td>Reporte 1</td>
-                                  </tr>
-                                  <tr>
-                                      <td>Reporte 2</td>
-                                  </tr>
-                                  <tr>
-                                      <td>Reporte 3</td>
-                                  </tr>
-                                  <tr>
-                                      <td>Reporte 4</td>
-                                  </tr>
-                                  <tr>
-                                      <td>Reporte 5</td>
-                                  </tr>
-                                  </tbody>
-                              </table>
-                                    </div>
-                                    <div class="col-md-1">
-                                    </div>
-                                <div class="col-md-8 tabla2">
-                                  <div class="card-heading card-default listakpi">
-                                      Reportes
-                                  </div>
-                                        <div class="card-block">
-                                        <table id="datatable2" class="table table-striped dt-responsive nowrap">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Nombre</th>
-                                                                <th>Frecuencia</th>
-                                                                <th>Total</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>Ventas</td>
-                                                                <td>Diario</td>
-                                                                <th>400</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Compras</td>
-                                                                <td>Diario</td>
-                                                                <th>500</th>
-                                                              </tr>
-                                                        </tbody>
-                                                    </table>
-                                         </div>
-                                </div>
-                                      </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-
-
             <footer class="footer">
                 <span>Copyright &copy; 2017 CCEO Software Development</span>
             </footer>
@@ -472,7 +461,7 @@
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
     <div class="card-heading card-default">
-       Configurar Reporte
+       Configurar Informe
     </div>
     </div>
           <div class="modal-body">
@@ -502,6 +491,15 @@
                                   <option>Semanal</option>
                                   <option>Mensual</option>
                                   <option>Anual</option>
+                              </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Tipo de Grafica</label>
+                              <select name="account" class="form-control m-b">
+                                  <option>Pastel</option>
+                                  <option>Barra</option>
+                                  <option>Lineal</option>
+                                  <option>Area</option>
                               </select>
                       </div>
 
@@ -557,6 +555,12 @@
     <!-- Jquery UI -->
       <script src="assets/lib/jquery-ui/jquery-ui.min.js"></script>
       <script src="assets/js/jquery.ui.custom.js"></script>
+
+      <!-- Morris -->
+      <script src="assets/lib/morris/raphael-2.1.0.min.js"></script>
+      <script src="assets/lib/morris/morris.js"></script>
+      <script src="assets/js/morris.custom.js"></script>
+
         <script>
             $(document).ready(function () {
                 $('#datatable').dataTable();
@@ -593,7 +597,25 @@
                   });
               });
               });
+
           </script>
+          <script>
+              $(document).ready(function () {
+                //Success
+                $('#success-alert1').click(function () {
+                    swal({
+                        title: "¿Estas Seguro?",
+                        text: "",
+                        type: "success",
+                        showCancelButton: true,
+                        cancelButtonClass: 'btn-secondary ',
+                        confirmButtonClass: 'btn-success',
+                        confirmButtonText: 'Success!'
+                    });
+                });
+                });
+
+            </script>
           <script>
               $(function() {
           /* DataRange */

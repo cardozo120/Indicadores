@@ -1,9 +1,10 @@
-/* 
+/*
  Jquery UI custom js file
  */
 $(function () {
     "use strict";
-    $("#simple").selectmenu();
+    $("#simple1").selectmenu();
+    $("#simple2").selectmenu();
     $("#optgroup").selectmenu();
     $("#disabled").selectmenu();
     $("#accordion").accordion({
@@ -234,7 +235,7 @@ $(function () {
             $(this).addClass("bg-success border-success").html("<span>Dropped!</span>");
         }
     });
-    
+
 
     // Accept drop
 
