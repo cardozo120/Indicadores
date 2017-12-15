@@ -5,6 +5,7 @@ $(function () {
     "use strict";
     $("#simple1").selectmenu();
     $("#simple2").selectmenu();
+    $("#simple3").selectmenu();
     $("#optgroup").selectmenu();
     $("#disabled").selectmenu();
     $("#accordion").accordion({
