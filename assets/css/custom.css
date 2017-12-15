@@ -131,3 +131,8 @@ cursor: pointer;
 .Rguardados:hover {
   color: #fff;
 }
+/*Perfil*/
+.cardPerfil{
+width: 50%;
+margin: auto;
+}
