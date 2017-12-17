@@ -1,4 +1,8 @@
-
+/*Perfil*/
+.cardPerfil{
+width: 50%;
+margin: auto;
+}
 .menu2 {
   text-align: center;
   height: 30px;
@@ -82,6 +86,10 @@ margin-left: 42%;
   .calendario{
     margin-left: 35%;
   }
+  .cardPerfil{
+  width: 90%;
+  margin: auto;
+  }
 }
 @media (min-width:601px) {
   .cerrar{
@@ -130,9 +138,4 @@ cursor: pointer;
 }
 .Rguardados:hover {
   color: #fff;
-}
-/*Perfil*/
-.cardPerfil{
-width: 50%;
-margin: auto;
 }
